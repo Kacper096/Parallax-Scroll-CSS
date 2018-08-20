@@ -1,5 +1,134 @@
-﻿body {
-  /* Usuń komentarz tego elementu, aby włączyć przewijanie i powiększanie
-  touch-action: manipulation;
-  */
+﻿body, html
+{
+    height:100%;
+    margin:0;
+    font: 400 15px/1.8 "Times New Roman", sans serif;
+    color:#777
+}
+
+.pic_1, .pic_2, .pic_3, .pic_in
+{
+    position:relative;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:block;
+}
+
+.pic_1
+{
+    background-image:url("../images/33617077_2009165559336689_5834027362907324416_o.jpg");
+    min-height:100%;
+    
+}
+
+.pic_2 .pic_in {
+    background-image: url("../images/32231150_1486930524750735_8248742381415825408_o.jpg");
+    background-position-y: bottom;
+    transition: .6s linear;
+    min-height: 600px;
+    left:0;
+    right:0;
+    
+}
+.pic_3 {
+    background-image: url('../images/25487253_1358662640910858_7975571268599060347_o.jpg');
+    background-position-y: -150px;
+    min-height: 600px;
+}
+
+
+
+.pic_2 .overlay
+{
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgba(0,0,0,0.8);
+    overflow:hidden;
+    width:0;
+    height:20%;
+    transition: .5s ease;
+    border-radius:200px;
+}
+.pic_2:hover .overlay {
+    width: 20%;
+    right: 0;
+    
+}
+.pic_2:hover .pic_in {
+    margin-left: 30%;
+    right: 0;
+    -webkit-filter: blur(10px);
+    
+}
+
+#text {
+    color: greenyellow;
+    font-size: 25px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    white-space:nowrap;
+    letter-spacing:5px;
+    
+
+}
+.pic_2 .a5 {
+    background-image: url('../images/31378767_1995995390653706_587090266091997538_n.jpg');
+    background-size:cover;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0;
+    transition: .6s linear;
+  
+}
+.pic_2:hover .a5
+{
+    
+    width:30%;
+    
+}
+
+
+.caption
+{
+    position:absolute;
+    left:0;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+}
+
+.caption span.border
+{
+    background-color:#111;
+    color:#ddd;
+    padding:18px;
+    font-size:25px;
+    letter-spacing:10px;
+}
+
+h3
+{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font:20px "Times New Roman", sans serif;
+    color:gold;
+}
+
+.logo {
+    background-image: url('../images/Audi-Logo-Wallpapers_0501201101.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position:center;
+    min-width:100%;
+    
 }
